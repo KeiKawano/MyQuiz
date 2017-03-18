@@ -22,12 +22,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="68n-kF-ogL">
+                                <rect key="frame" x="118" y="238" width="138" height="48"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w4L-9i-MJB">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="48"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-Bw-RFd">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyQuiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-GF-x8x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1e-4C-fqn">
-                                <rect key="frame" x="149" y="408" width="77" height="64"/>
+                                <rect key="frame" x="149" y="319" width="77" height="29"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="4PS-eH-NDa"/>
-                                    <constraint firstAttribute="width" constant="77" id="o11-EM-5fy"/>
+                                    <constraint firstAttribute="width" constant="77" id="qN9-g3-6KA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="START">
@@ -37,22 +57,15 @@
                                     <segue destination="sq5-sc-5g8" kind="presentation" id="K03-Et-YcK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyQuiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-GF-x8x">
-                                <rect key="frame" x="118" y="243" width="138" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="138" id="Wpm-wD-Mgx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r1e-4C-fqn" secondAttribute="bottom" constant="195" id="1Yv-QE-8nL"/>
-                            <constraint firstItem="ZJH-GF-x8x" firstAttribute="centerX" secondItem="r1e-4C-fqn" secondAttribute="centerX" id="IB7-K9-KS8"/>
-                            <constraint firstItem="ZJH-GF-x8x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="223" id="Wdj-Gs-9DN"/>
-                            <constraint firstItem="ZJH-GF-x8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v0r-9p-1lp"/>
+                            <constraint firstItem="68n-kF-ogL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2mu-G0-oMS"/>
+                            <constraint firstItem="68n-kF-ogL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="118" id="dma-zH-59k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r1e-4C-fqn" secondAttribute="bottom" constant="319" id="f3x-Bp-N9x"/>
+                            <constraint firstItem="r1e-4C-fqn" firstAttribute="top" secondItem="68n-kF-ogL" secondAttribute="bottom" constant="33" id="iau-iq-lfY"/>
+                            <constraint firstItem="68n-kF-ogL" firstAttribute="centerX" secondItem="r1e-4C-fqn" secondAttribute="centerX" id="mcS-ox-wA6"/>
+                            <constraint firstItem="r1e-4C-fqn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ta6-JL-A8b"/>
                         </constraints>
                     </view>
                 </viewController>
