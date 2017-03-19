@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AA11F3B21E7CCA6E0008A10C /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11F3B11E7CCA6E0008A10C /* QuestionDataManager.swift */; };
+		AAAA79C01E7EC6C1004A53DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAA79BF1E7EC6C1004A53DB /* AudioToolbox.framework */; };
+		AAC177F81E7CEFFA0038D60F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC177F71E7CEFFA0038D60F /* StartViewController.swift */; };
+		AAC177FA1E7CF3EB0038D60F /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC177F91E7CF3EB0038D60F /* QuestionViewController.swift */; };
 		AADC89C41E7C35EF002C239A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC89C31E7C35EF002C239A /* AppDelegate.swift */; };
 		AADC89C61E7C35EF002C239A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC89C51E7C35EF002C239A /* ViewController.swift */; };
 		AADC89C91E7C35EF002C239A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADC89C71E7C35EF002C239A /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		AA11F3B11E7CCA6E0008A10C /* QuestionDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
+		AAAA79BF1E7EC6C1004A53DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AAC177F71E7CEFFA0038D60F /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		AAC177F91E7CF3EB0038D60F /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AADC89C01E7C35EF002C239A /* MyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADC89C31E7C35EF002C239A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AADC89C51E7C35EF002C239A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAA79C01E7EC6C1004A53DB /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAAA79BE1E7EC6C1004A53DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA79BF1E7EC6C1004A53DB /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AADC89B71E7C35EF002C239A = {
 			isa = PBXGroup;
 			children = (
 				AADC89C21E7C35EF002C239A /* MyQuiz */,
 				AADC89C11E7C35EF002C239A /* Products */,
+				AAAA79BE1E7EC6C1004A53DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +76,8 @@
 			children = (
 				AADC89C31E7C35EF002C239A /* AppDelegate.swift */,
 				AADC89C51E7C35EF002C239A /* ViewController.swift */,
+				AAC177F71E7CEFFA0038D60F /* StartViewController.swift */,
+				AAC177F91E7CF3EB0038D60F /* QuestionViewController.swift */,
 				AA11F3B11E7CCA6E0008A10C /* QuestionDataManager.swift */,
 				AADC89C71E7C35EF002C239A /* Main.storyboard */,
 				AADC89D51E7C48B2002C239A /* question.csv */,
@@ -145,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADC89C61E7C35EF002C239A /* ViewController.swift in Sources */,
+				AAC177FA1E7CF3EB0038D60F /* QuestionViewController.swift in Sources */,
+				AAC177F81E7CEFFA0038D60F /* StartViewController.swift in Sources */,
 				AADC89C41E7C35EF002C239A /* AppDelegate.swift in Sources */,
 				AA11F3B21E7CCA6E0008A10C /* QuestionDataManager.swift in Sources */,
 			);
