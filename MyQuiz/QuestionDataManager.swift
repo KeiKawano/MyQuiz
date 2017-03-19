@@ -25,7 +25,7 @@ class QuestionData {
     // ユーザが選択した選択肢の番号
     var userChoiceAnswerNumber: Int?
     // 問題の番号
-    var questionNo: Int
+    var questionNo: Int = 0
     
     // クラスが生成されたときの処理
     init(questionSourceDataArray: [String]) {

@@ -37,9 +37,11 @@ class StartViewController: UIViewController {
         }
         // 問題文のセット
         nextViewController.questionData = questionData
-        
-        // タイトルに戻ってくるときに呼び出される処理
-        @IBAction func goToTitle(_ segue: UIStoryboardSegue)
+    }
+    
+    // タイトルに戻ってくるときに呼び出される処理
+    @IBAction func goToTitle(_ segue: UIStoryboardSegue) {
+    
     }
 
     /*

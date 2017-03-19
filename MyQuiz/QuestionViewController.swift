@@ -66,17 +66,17 @@ class QuestionViewController: UIViewController {
         // 正解しているか判断する
         if questionData.isCorrect() {
             // 正解のアニメーションを再生しながら次の問題へ遷移する
-            goNextQuestionWithCorrectAnimation(soundId: 1025)
+            goNextQuestionWithCorrectAnimation()
         } else {
             // 不正解のアニメーションを再生しながら次の問題へ遷移する
-            goNextQuestionWithCorrectAnimation(soundId: 1006)
+            goNextQuestionWithIncorrectAnimation()
         
         }
     }
-    // 次の問題に正解か不正解のアニメーション付きで遷移する
-    func goNextQuestionWithCorrectAnimation(soundId: Int) {
-        // 正解か不正解を伝える音を鳴らす
-        AudioServicesPlayAlertSound(SystemSoundID(soundId))
+    // 次の問題に正解のアニメーション付きで遷移する
+    func goNextQuestionWithCorrectAnimation() {
+        // 正解を伝える音を鳴らす
+        AudioServicesPlayAlertSound(1025)
         // アニメーション
         UIView.animate(withDuration: 2.0, animations: {
             //アルファ値を1.0に変化させる（初期値はStoryboadで0.0に設定済み）
@@ -85,13 +85,25 @@ class QuestionViewController: UIViewController {
                 self.goNextQuestion() // アニメーション終了後に次の問題に進む
         }
     }
+    // 次の問題に不正解のアニメーション付きで遷移する
+    func goNextQuestionWithIncorrectAnimation() {
+        // 不正解を伝える音を鳴らす
+        AudioServicesPlayAlertSound(1006)
+        // アニメーション
+        UIView.animate(withDuration: 2.0, animations: {
+            //アルファ値を1.0に変化させる（初期値はStoryboadで0.0に設定済み）
+            self.incorrectImageView.alpha = 1.0
+        }) { (Bool) in
+            self.goNextQuestion() // アニメーション終了後に次の問題に進む
+        }
+    }
     // 次の問題に遷移する
     func goNextQuestion() {
         // 問題文の取り出し
         guard let nextQuestion = QuestionDataManager.sharedInstance.nextQuestion() else {
             // 問題文がなければ結果画面へ遷移する
             // StoryboadのIdentifierに設定した値（result）を指定してViewControllerを生成する
-            if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResltViewController {
+            if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController {
                 // StoryboadのSegueを利用しない明示的な画面遷移処理
                 present(resultViewController, animated: true, completion: nil)
             }
